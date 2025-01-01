@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fbe9e7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            background-color: #bf360c;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            background-color: #d84315;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        header a:hover {
+            background-color: #bf360c;
+        }
+        main {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #d84315;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #d84315;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #bf360c;
+        }
+        .animation {
+            margin: 30px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #bf360c;
+            animation: color-change 3s infinite;
+        }
+        @keyframes color-change {
+            0% {
+                background-color: #bf360c;
+            }
+            50% {
+                background-color: #ff5722;
+            }
+            100% {
+                background-color: #bf360c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()">Back</a>
+    </header>
+    <main>
+        <h1>Welcome to JavaScript</h1>
+        <p style="text-align: center;">Learn the basics of JavaScript through interactive examples below.</p>
+        <div class="animation"></div>
+
+        <section>
+            <h2>1. Variables</h2>
+            <p>JavaScript variables store data that can be used later. Examples:</p>
+            <pre>
+// Declaring variables
+let name = "John";
+const age = 25;
+console.log(name, age); // Outputs: John 25
+            </pre>
+            <p>Try it:</p>
+            <button onclick="showVariables()">Click to Run</button>
+            <script>
+                function showVariables() {
+                    let name = "John";
+                    const age = 25;
+                    alert(`Name: ${name}, Age: ${age}`);
+                }
+            </script>
+        </section>
+
+        <section>
+            <h2>2. Functions</h2>
+            <p>Functions allow you to reuse blocks of code:</p>
+            <pre>
+// Defining a function
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Using the function
+console.log(greet("Alice")); // Outputs: Hello, Alice!
+            </pre>
+            <p>Try it:</p>
+            <button onclick="showGreeting()">Greet</button>
+            <script>
+                function showGreeting() {
+                    let name = prompt("Enter your name:");
+                    alert(`Hello, ${name}!`);
+                }
+            </script>
+        </section>
+
+        <section>
+            <h2>3. Events</h2>
+            <p>JavaScript allows you to handle user interactions using events:</p>
+            <pre>
+// Adding an event listener
+document.querySelector("button").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+            </pre>
+            <p>Click the button above to see an example!</p>
+        </section>
+
+        <section>
+            <h2>4. Loops</h2>
+            <p>Loops are used to repeat a block of code:</p>
+            <pre>
+// Using a for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+            </pre>
+            <p>Try it:</p>
+            <button onclick="showLoop()">Run Loop</button>
+            <script>
+                function showLoop() {
+                    let output = "";
+                    for (let i = 0; i < 5; i++) {
+                        output += `Count: ${i}\n`;
+                    }
+                    alert(output);
+                }
+            </script>
+        </section>
+
+        <section>
+            <h2>5. DOM Manipulation</h2>
+            <p>JavaScript can dynamically change the content of your webpage:</p>
+            <pre>
+// Changing text content
+document.querySelector("h1").textContent = "JavaScript is Fun!";
+            </pre>
+            <p>Try it:</p>
+            <button onclick="changeTitle()">Change Title</button>
+            <script>
+                function changeTitle() {
+                    document.querySelector("h1").textContent = "JavaScript is Amazing!";
+                }
+            </script>
+        </section>
+    </main>
+</body>
+</html>
