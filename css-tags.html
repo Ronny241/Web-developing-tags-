@@ -3,93 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn CSS basics with examples and explanations of CSS properties and concepts.">
-    <title>CSS Overview</title>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
-    
+    <meta name="description" content="Comprehensive overview of CSS properties and concepts.">
+    <title>Learn CSS Basics</title>
     <style>
+        /* General Page Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            background-color: #e0f7fa;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #e3f2fd, #e0f7fa);
+            color: #333;
         }
+
+        /* Header Styles */
         header {
+            background: linear-gradient(135deg, #0288d1, #006064);
+            color: white;
             display: flex;
-            justify-content: flex-end;
-            padding: 10px 20px;
-            background-color: #004d40;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         header a {
             text-decoration: none;
-            color: white;
+            color: #fff;
             background-color: #00796b;
             padding: 10px 15px;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
+
         header a:hover {
             background-color: #004d40;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Dropdown List Styling */
+        .dropdown-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .dropdown-container select {
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #00796b;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
         main {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        h1, h2 {
-            text-align: center;
-            color: #00796b;
+
+        h2 {
+            color: #00695c;
         }
+
         section {
-            margin: 20px auto;
-            max-width: 800px;
+            margin-top: 2rem;
+            background: #fff;
             padding: 15px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         pre {
-            background: #f1f1f1;
-            padding: 10px;
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #00796b;
             border-radius: 5px;
             overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
         }
-        .animation {
-            margin: 30px auto;
-            width: 150px;
-            height: 150px;
-            background-color: #004d40;
-            animation: bounce 2s infinite;
+
+        footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
         }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
+
+        footer a {
+            color: #80cbc4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
             }
-            50% {
-                transform: translateY(-50px);
+
+            section {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="javascript:history.back()">Back</a>
+        <h1>Learn CSS Basics</h1>
+        <a href="index.html">Back to Home</a>
     </header>
     <main>
-        <h1>Welcome to CSS</h1>
-        <p style="text-align: center;">Explore examples of common CSS properties and concepts below.</p>
-        <div class="animation"></div>
+        <div class="dropdown-container">
+            <label for="cssSelector"><strong>Select a Topic:</strong></label>
+            <select id="cssSelector" onchange="filterCSS()">
+                <option value="all">--Show All--</option>
+                <option value="selectors">Selectors</option>
+                <option value="box-model">Box Model</option>
+                <option value="typography">Typography</option>
+                <option value="colors">Colors</option>
+                <option value="animations">Animations</option>
+                <option value="positioning">Positioning</option>
+                <option value="flexbox">Flexbox</option>
+                <option value="grid">Grid</option>
+            </select>
+        </div>
 
-        <section>
-            <h2>1. Selectors</h2>
-            <p>CSS selectors are used to select and style specific HTML elements. Common types include:</p>
-            <ul>
-                <li><strong>Element Selector:</strong> Targets an HTML element, like <code>h1</code>.</li>
-                <li><strong>Class Selector:</strong> Targets elements with a specific class, like <code>.animation</code>.</li>
-                <li><strong>ID Selector:</strong> Targets an element with a specific ID, like <code>#header</code>.</li>
-            </ul>
+        <section id="selectors">
+            <h2>CSS Selectors</h2>
+            <p>Selectors target HTML elements to apply styles. Examples include element, class, and ID selectors:</p>
             <pre>
 /* Element Selector */
 h1 {
@@ -97,126 +149,142 @@ h1 {
 }
 
 /* Class Selector */
-.animation {
-    background-color: green;
+.box {
+    background-color: lightblue;
 }
 
 /* ID Selector */
 #header {
-    background-color: yellow;
+    text-align: center;
 }
             </pre>
         </section>
 
-        <section>
-            <h2>2. Colors and Backgrounds</h2>
-            <p>CSS allows you to add colors and backgrounds to elements.</p>
+        <section id="box-model">
+            <h2>CSS Box Model</h2>
+            <p>The box model includes content, padding, borders, and margins:</p>
             <pre>
-/* Text Color */
+div {
+    padding: 10px;
+    border: 2px solid #00796b;
+    margin: 15px;
+    width: 200px; /* Content Width */
+    height: 100px; /* Content Height */
+}
+            </pre>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>Control the appearance of text using typography properties:</p>
+            <pre>
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.8;
+}
+            </pre>
+        </section>
+
+        <section id="colors">
+            <h2>Colors and Backgrounds</h2>
+            <p>CSS allows for vibrant styles using colors and background properties.</p>
+            <pre>
+body {
+    background-color: #e0f7fa; /* Solid Color */
+}
+
 h1 {
-    color: #00796b;
+    color: #006064; /* Text Color */
 }
 
-/* Background Color */
-body {
-    background-color: #e0f7fa;
-}
-
-/* Gradient Background */
 div {
-    background: linear-gradient(to right, #004d40, #00796b);
+    background: linear-gradient(to right, #0288d1, #004d40); /* Gradient */
 }
             </pre>
         </section>
 
-        <section>
-            <h2>3. Box Model</h2>
-            <p>The CSS box model consists of margins, borders, padding, and the content area.</p>
-            <pre>
-div {
-    margin: 20px; /* Space outside the element */
-    border: 2px solid #004d40; /* Border around the element */
-    padding: 10px; /* Space inside the border */
-    width: 100px; /* Width of the content area */
-}
-            </pre>
-        </section>
-
-        <section>
-            <h2>4. Fonts and Text</h2>
-            <p>CSS provides properties to style fonts and text.</p>
-            <pre>
-body {
-    font-family: Arial, sans-serif; /* Font style */
-    font-size: 16px; /* Font size */
-    color: #333; /* Text color */
-    text-align: center; /* Align text */
-}
-            </pre>
-        </section>
-
-        <section>
-            <h2>5. Animations</h2>
-            <p>CSS animations let you create dynamic visual effects.</p>
+        <section id="animations">
+            <h2>CSS Animations</h2>
+            <p>Use CSS animations to add movement and effects:</p>
             <pre>
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
 }
 
 div {
-    animation: bounce 2s infinite; /* Apply the animation */
+    animation: bounce 2s infinite;
 }
             </pre>
         </section>
 
-        <section>
-            <h2>6. Positioning</h2>
-            <p>CSS positioning allows you to control the layout of elements on the page.</p>
+        <section id="positioning">
+            <h2>CSS Positioning</h2>
+            <p>CSS positioning controls the placement of elements:</p>
             <pre>
-/* Static (default) */
-div {
-    position: static;
-}
-
-/* Relative */
+/* Relative Position */
 div {
     position: relative;
     top: 10px;
-    left: 10px;
+    left: 20px;
 }
 
-/* Absolute */
+/* Absolute Position */
 div {
     position: absolute;
     top: 50px;
     left: 50px;
 }
+            </pre>
+        </section>
 
-/* Fixed */
-div {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+        <section id="flexbox">
+            <h2>CSS Flexbox</h2>
+            <p>Flexbox is used for aligning elements within a container:</p>
+            <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+            </pre>
+        </section>
+
+        <section id="grid">
+            <h2>CSS Grid</h2>
+            <p>Grid layout provides a two-dimensional layout system for the web:</p>
+            <pre>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
             </pre>
         </section>
     </main>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
-<!-- Homepage_banner -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7272083707051398"
-     data-ad-slot="6415286992"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <footer>
+        <p>&copy; 2025 CSS Overview | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        function filterCSS() {
+            const selector = document.getElementById('cssSelector').value;
+            const sections = document.querySelectorAll('main section');
+
+            if (selector === "all") {
+                sections.forEach(section => section.style.display = "block");
+            } else {
+                sections.forEach(section => {
+                    section.style.display = section.id === selector ? "block" : "none";
+                });
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,111 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Overview</title>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
-    
+    <title>Learn JavaScript Basics</title>
     <style>
+        /* General Page Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            background-color: #fbe9e7;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #ffe0b2, #ffccbc);
+            color: #333;
         }
+
+        /* Header Styles */
         header {
+            background: linear-gradient(135deg, #e64a19, #bf360c);
+            color: white;
             display: flex;
-            justify-content: flex-end;
-            padding: 10px 20px;
-            background-color: #bf360c;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         header a {
             text-decoration: none;
-            color: white;
+            color: #fff;
             background-color: #d84315;
             padding: 10px 15px;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
+
         header a:hover {
             background-color: #bf360c;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Dropdown List Styling */
+        .dropdown-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .dropdown-container select {
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #d84315;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
         main {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        h1, h2 {
-            text-align: center;
-            color: #d84315;
+
+        h2 {
+            color: #bf360c;
         }
+
         section {
-            margin: 20px auto;
-            max-width: 800px;
+            margin-top: 2rem;
+            background: #fff;
             padding: 15px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         pre {
-            background: #f1f1f1;
-            padding: 10px;
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #e64a19;
             border-radius: 5px;
             overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
         }
-        button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #d84315;
+
+        footer {
+            background: #bf360c;
             color: white;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
         }
-        button:hover {
-            background-color: #bf360c;
+
+        footer a {
+            color: #ffab91;
+            text-decoration: none;
+            font-weight: bold;
         }
-        .animation {
-            margin: 30px auto;
-            width: 100px;
-            height: 100px;
-            background-color: #bf360c;
-            animation: color-change 3s infinite;
+
+        footer a:hover {
+            text-decoration: underline;
         }
-        @keyframes color-change {
-            0% {
-                background-color: #bf360c;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
             }
-            50% {
-                background-color: #ff5722;
-            }
-            100% {
-                background-color: #bf360c;
+
+            section {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="javascript:history.back()">Back</a>
+        <h1>Learn JavaScript Basics</h1>
+        <a href="index.html">Back to Home</a>
     </header>
     <main>
-        <h1>Welcome to JavaScript</h1>
-        <p style="text-align: center;">Learn the basics of JavaScript through interactive examples below.</p>
-        <div class="animation"></div>
+        <div class="dropdown-container">
+            <label for="jsSelector"><strong>Select a Topic:</strong></label>
+            <select id="jsSelector" onchange="filterJS()">
+                <option value="all">--Show All--</option>
+                <option value="variables">Variables</option>
+                <option value="functions">Functions</option>
+                <option value="events">Events</option>
+                <option value="loops">Loops</option>
+                <option value="dom">DOM Manipulation</option>
+                <option value="es6">ES6 Features</option>
+                <option value="objects">Objects</option>
+            </select>
+        </div>
 
-        <section>
-            <h2>1. Variables</h2>
-            <p>JavaScript variables store data that can be used later. Examples:</p>
+        <section id="variables">
+            <h2>JavaScript Variables</h2>
+            <p>Variables store data that can be used later:</p>
             <pre>
 // Declaring variables
 let name = "John";
 const age = 25;
 console.log(name, age); // Outputs: John 25
             </pre>
-            <p>Try it:</p>
-            <button onclick="showVariables()">Click to Run</button>
+            <button onclick="showVariables()">Try It</button>
             <script>
                 function showVariables() {
                     let name = "John";
@@ -117,8 +156,8 @@ console.log(name, age); // Outputs: John 25
             </script>
         </section>
 
-        <section>
-            <h2>2. Functions</h2>
+        <section id="functions">
+            <h2>JavaScript Functions</h2>
             <p>Functions allow you to reuse blocks of code:</p>
             <pre>
 // Defining a function
@@ -129,7 +168,6 @@ function greet(name) {
 // Using the function
 console.log(greet("Alice")); // Outputs: Hello, Alice!
             </pre>
-            <p>Try it:</p>
             <button onclick="showGreeting()">Greet</button>
             <script>
                 function showGreeting() {
@@ -139,29 +177,27 @@ console.log(greet("Alice")); // Outputs: Hello, Alice!
             </script>
         </section>
 
-        <section>
-            <h2>3. Events</h2>
-            <p>JavaScript allows you to handle user interactions using events:</p>
+        <section id="events">
+            <h2>JavaScript Events</h2>
+            <p>Events allow you to handle user interactions:</p>
             <pre>
 // Adding an event listener
 document.querySelector("button").addEventListener("click", function() {
     alert("Button clicked!");
 });
             </pre>
-            <p>Click the button above to see an example!</p>
         </section>
 
-        <section>
-            <h2>4. Loops</h2>
-            <p>Loops are used to repeat a block of code:</p>
+        <section id="loops">
+            <h2>JavaScript Loops</h2>
+            <p>Loops allow you to repeat blocks of code:</p>
             <pre>
 // Using a for loop
 for (let i = 0; i < 5; i++) {
     console.log(i);
 }
             </pre>
-            <p>Try it:</p>
-            <button onclick="showLoop()">Run Loop</button>
+            <button onclick="showLoop()">Try It</button>
             <script>
                 function showLoop() {
                     let output = "";
@@ -173,14 +209,13 @@ for (let i = 0; i < 5; i++) {
             </script>
         </section>
 
-        <section>
-            <h2>5. DOM Manipulation</h2>
-            <p>JavaScript can dynamically change the content of your webpage:</p>
+        <section id="dom">
+            <h2>DOM Manipulation</h2>
+            <p>JavaScript can dynamically modify the DOM:</p>
             <pre>
 // Changing text content
 document.querySelector("h1").textContent = "JavaScript is Fun!";
             </pre>
-            <p>Try it:</p>
             <button onclick="changeTitle()">Change Title</button>
             <script>
                 function changeTitle() {
@@ -188,18 +223,50 @@ document.querySelector("h1").textContent = "JavaScript is Fun!";
                 }
             </script>
         </section>
+
+        <section id="es6">
+            <h2>ES6 Features</h2>
+            <p>Modern JavaScript (ES6) includes new features like let/const and arrow functions:</p>
+            <pre>
+// Arrow function
+const add = (a, b) => a + b;
+
+console.log(add(5, 3)); // Outputs: 8
+            </pre>
+        </section>
+
+        <section id="objects">
+            <h2>JavaScript Objects</h2>
+            <p>Objects store collections of data and methods:</p>
+            <pre>
+const person = {
+    name: "Alice",
+    age: 30,
+    greet() {
+        return `Hi, I'm ${this.name}`;
+    }
+};
+
+console.log(person.greet()); // Outputs: Hi, I'm Alice
+            </pre>
+        </section>
     </main>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
-<!-- Homepage_banner -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7272083707051398"
-     data-ad-slot="6415286992"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <footer>
+        <p>&copy; 2025 JavaScript Overview | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        function filterJS() {
+            const selector = document.getElementById('jsSelector').value;
+            const sections = document.querySelectorAll('main section');
+
+            if (selector === "all") {
+                sections.forEach(section => section.style.display = "block");
+            } else {
+                sections.forEach(section => {
+                    section.style.display = section.id === selector ? "block" : "none";
+                });
+            }
+        }
+    </script>
 </body>
 </html>

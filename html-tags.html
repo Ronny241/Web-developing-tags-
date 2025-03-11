@@ -1,174 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn HTML basics with examples and explanations of HTML tags.">
-    <title>Learn HTML Basics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML basics with examples and explanations of many HTML tags.">
+  <meta name="keywords" content="HTML tags, learn HTML, HTML tutorial, HTML reference">
+  <meta name="author" content="Your Name">
+  <title>HTML Tags Reference</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+      color: #333;
+    }
     
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
+    /* Header Styling */
+    header {
+      background: linear-gradient(135deg, #4caf50, #00796b);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            display: flex;
-            justify-content: flex-end;
-            padding: 10px 20px;
-            background-color: #2c3e50;
-        }
-        header a {
-            text-decoration: none;
-            color: white;
-            background-color: #c0392b;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        header a:hover {
-            background-color: #e74c3c;
-        }
-        main {
-            padding: 20px;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #34495e;
-        }
-        section {
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 15px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        pre {
-            background: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .animation {
-            margin: 30px auto;
-            width: 100px;
-            height: 100px;
-            background-color: #e74c3c;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    header a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #e74c3c;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    header a:hover {
+      background-color: #c0392b;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    
+    /* Dropdown List Styling */
+    .dropdown-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .dropdown-container select {
+      width: 60%;
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 2px solid #4caf50;
+      border-radius: 5px;
+    }
+    
+    /* Main Content Styling */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      color: #00796b;
+      margin-bottom: 1rem;
+    }
+    
+    section {
+      margin-top: 2rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-left: 5px solid #4caf50;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    
+    footer {
+      background: #2c2c2c;
+      color: #ddd;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #4caf50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+  
+      .dropdown-container select {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="javascript:history.back()">Back</a>
-    </header>
-    <main>
-        <h1>Welcome to Learn HTML</h1>
-        <p style="text-align: center;">Explore examples of common HTML tags below.</p>
-        <div class="animation"></div>
-        
-        <section>
-            <h2>1. The &lt;html&gt; Tag</h2>
-            <p>The <code>&lt;html&gt;</code> tag represents the root of an HTML document. All content of the page is enclosed within this tag.</p>
-            <pre>
-&lt;html&gt;
-    &lt;!-- Content here --&gt;
-&lt;/html&gt;
-            </pre>
-        </section>
-         
-        <section>
-            <h2>2. The &lt;head&gt; Tag</h2>
-            <p>The <code>&lt;head&gt;</code> tag contains metadata about the HTML document, like the title, character encoding, and linked resources.</p>
-            <pre>
-&lt;head&gt;
-    &lt;title&gt;My Website&lt;/title&gt;
-    &lt;meta charset="UTF-8"&gt;
-&lt;/head&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>3. The &lt;body&gt; Tag</h2>
-            <p>The <code>&lt;body&gt;</code> tag contains the visible content of the web page, such as text, images, and interactive elements.</p>
-            <pre>
-&lt;body&gt;
-    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
-    &lt;p&gt;This is a sample paragraph.&lt;/p&gt;
-&lt;/body&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>4. The &lt;h1&gt; to &lt;h6&gt; Tags</h2>
-            <p>These tags define headings, from the largest (<code>&lt;h1&gt;</code>) to the smallest (<code>&lt;h6&gt;</code>).</p>
-            <pre>
+  <header>
+    <h1>HTML Tags Reference</h1>
+    <a href="index.html">Home</a>
+  </header>
+  <main>
+    <div class="dropdown-container">
+      <label for="tagSelector"><strong>Select a Tag:</strong></label>
+      <select id="tagSelector" onchange="filterTags()">
+        <option value="all">--Show All--</option>
+        <option value="a-tag">Link (&lt;a&gt;)</option>
+        <option value="img-tag">Image (&lt;img&gt;)</option>
+        <option value="p-tag">Paragraph (&lt;p&gt;)</option>
+        <option value="h1-h6-tag">Headings (&lt;h1&gt;-&lt;h6&gt;)</option>
+        <option value="div-tag">Division (&lt;div&gt;)</option>
+        <option value="ul-li-tag">List (&lt;ul&gt; &amp; &lt;li&gt;)</option>
+        <option value="table-tag">Table (&lt;table&gt;)</option>
+        <option value="form-tag">Form (&lt;form&gt;)</option>
+        <option value="span-tag">Span (&lt;span&gt;)</option>
+        <option value="header-tag">Header (&lt;header&gt;)</option>
+        <option value="footer-tag">Footer (&lt;footer&gt;)</option>
+        <option value="nav-tag">Navigation (&lt;nav&gt;)</option>
+        <option value="article-tag">Article (&lt;article&gt;)</option>
+        <option value="section-tag">Section (&lt;section&gt;)</option>
+        <option value="aside-tag">Aside (&lt;aside&gt;)</option>
+        <option value="script-tag">Script (&lt;script&gt;)</option>
+        <option value="link-tag">Link (&lt;link&gt;)</option>
+        <option value="meta-tag">Meta (&lt;meta&gt;)</option>
+        <option value="iframe-tag">iFrame (&lt;iframe&gt;)</option>
+        <option value="em-tag">Emphasis (&lt;em&gt;)</option>
+        <option value="strong-tag">Strong (&lt;strong&gt;)</option>
+      </select>
+    </div>
+    
+    <!-- Tag Sections -->
+    
+    <section id="a-tag">
+      <h2>&lt;a&gt; Tag</h2>
+      <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link to another page or location within the same page.</p>
+      <pre>
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+      </pre>
+    </section>
+    
+    <section id="img-tag">
+      <h2>&lt;img&gt; Tag</h2>
+      <p>The <code>&lt;img&gt;</code> tag is used to embed images into the webpage. It requires the 'src' attribute for the image source.</p>
+      <pre>
+&lt;img src="image.jpg" alt="Description of the image"&gt;
+      </pre>
+    </section>
+    
+    <section id="p-tag">
+      <h2>&lt;p&gt; Tag</h2>
+      <p>The <code>&lt;p&gt;</code> tag defines a paragraph of text.</p>
+      <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+      </pre>
+    </section>
+    
+    <section id="h1-h6-tag">
+      <h2>&lt;h1&gt; to &lt;h6&gt; Tags</h2>
+      <p>These tags define headings ranging from the largest (<code>&lt;h1&gt;</code>) to the smallest (<code>&lt;h6&gt;</code>).</p>
+      <pre>
 &lt;h1&gt;Main Heading&lt;/h1&gt;
 &lt;h2&gt;Subheading&lt;/h2&gt;
 &lt;h3&gt;Sub-subheading&lt;/h3&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>5. The &lt;p&gt; Tag</h2>
-            <p>The <code>&lt;p&gt;</code> tag defines a paragraph of text.</p>
-            <pre>
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>6. The &lt;a&gt; Tag</h2>
-            <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which links to another web page or a location within the same page.</p>
-            <pre>
-&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>7. The &lt;div&gt; Tag</h2>
-            <p>The <code>&lt;div&gt;</code> tag is a container for grouping elements, often styled with CSS or manipulated with JavaScript.</p>
-            <pre>
+      </pre>
+    </section>
+    
+    <section id="div-tag">
+      <h2>&lt;div&gt; Tag</h2>
+      <p>The <code>&lt;div&gt;</code> tag is a container for grouping elements, often styled with CSS or manipulated with JavaScript.</p>
+      <pre>
 &lt;div&gt;
     &lt;p&gt;This is inside a div.&lt;/p&gt;
 &lt;/div&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>8. The &lt;img&gt; Tag</h2>
-            <p>The <code>&lt;img&gt;</code> tag embeds an image in the page. It requires the <code>src</code> attribute to specify the image source and the <code>alt</code> attribute for accessibility.</p>
-            <pre>
-&lt;img src="image.jpg" alt="Description of the image"&gt;
-            </pre>
-        </section>
-    </main>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272083707051398"
-     crossorigin="anonymous"></script>
-<!-- Homepage_banner -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7272083707051398"
-     data-ad-slot="6415286992"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+      </pre>
+    </section>
+    
+    <section id="ul-li-tag">
+      <h2>&lt;ul&gt; and &lt;li&gt; Tags</h2>
+      <p>These tags create unordered lists (<code>&lt;ul&gt;</code>) with list items (<code>&lt;li&gt;</code>), commonly used for bullet points.</p>
+      <pre>
+&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+      </pre>
+    </section>
+    
+    <section id="table-tag">
+      <h2>&lt;table&gt; Tag</h2>
+      <p>The <code>&lt;table&gt;</code> tag defines a table in HTML to display data in rows and columns.</p>
+      <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Col 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Col 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    </section>
+    
+    <section id="form-tag">
+      <h2>&lt;form&gt; Tag</h2>
+      <p>The <code>&lt;form&gt;</code> tag defines an HTML form for user input, used to collect data from users.</p>
+      <pre>
+&lt;form action="submit.php" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+      </pre>
+    </section>
+    
+    <section id="span-tag">
+      <h2>&lt;span&gt; Tag</h2>
+      <p>The <code>&lt;span&gt;</code> tag is an inline container used to mark up a part of text or a document.</p>
+      <pre>
+&lt;span&gt;This is inline content.&lt;/span&gt;
+      </pre>
+    </section>
+    
+    <section id="header-tag">
+      <h2>&lt;header&gt; Tag</h2>
+      <p>The <code>&lt;header&gt;</code> tag represents a container for introductory or navigational aids. It typically includes the site title or logo and navigation links.</p>
+      <pre>
+&lt;header&gt;
+    &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+      </pre>
+    </section>
+    
+    <section id="footer-tag">
+      <h2>&lt;footer&gt; Tag</h2>
+      <p>The <code>&lt;footer&gt;</code> tag defines a footer for a document or section, often containing information like copyright details.</p>
+      <pre>
+&lt;footer&gt;
+    &copy; 2025 My Website
+&lt;/footer&gt;
+      </pre>
+    </section>
+    
+    <section id="nav-tag">
+      <h2>&lt;nav&gt; Tag</h2>
+      <p>The <code>&lt;nav&gt;</code> tag defines a section of navigation links.</p>
+      <pre>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+      </pre>
+    </section>
+    
+    <section id="article-tag">
+      <h2>&lt;article&gt; Tag</h2>
+      <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content, such as a blog post or news article.</p>
+      <pre>
+&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Article content goes here...&lt;/p&gt;
+&lt;/article&gt;
+      </pre>
+    </section>
+    
+    <section id="section-tag">
+      <h2>&lt;section&gt; Tag</h2>
+      <p>The <code>&lt;section&gt;</code> tag defines a section in a document, such as chapters, headers, or any thematic grouping of content.</p>
+      <pre>
+&lt;section&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;Section content goes here...&lt;/p&gt;
+&lt;/section&gt;
+      </pre>
+    </section>
+    
+    <section id="aside-tag">
+      <h2>&lt;aside&gt; Tag</h2>
+      <p>The <code>&lt;aside&gt;</code> tag defines content aside from the page's main content, often used for sidebars or call-out boxes.</p>
+      <pre>
+&lt;aside&gt;
+    &lt;p&gt;Side content...&lt;/p&gt;
+&lt;/aside&gt;
+      </pre>
+    </section>
+    
+    <section id="script-tag">
+      <h2>&lt;script&gt; Tag</h2>
+      <p>The <code>&lt;script&gt;</code> tag is used to embed or reference JavaScript code in an HTML document.</p>
+      <pre>
+&lt;script&gt;
+    console.log('Hello, world!');
+&lt;/script&gt;
+      </pre>
+    </section>
+    
+    <section id="link-tag">
+      <h2>&lt;link&gt; Tag</h2>
+      <p>The <code>&lt;link&gt;</code> tag specifies the relationship between the current document and an external resource. It is most commonly used to link CSS stylesheets.</p>
+      <pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+      </pre>
+    </section>
+    
+    <section id="meta-tag">
+      <h2>&lt;meta&gt; Tag</h2>
+      <p>The <code>&lt;meta&gt;</code> tag defines metadata about an HTML document such as its character encoding, description, or keywords. It is always placed inside the head of the document.</p>
+      <pre>
+&lt;meta charset="UTF-8"&gt;
+      </pre>
+    </section>
+    
+    <section id="iframe-tag">
+      <h2>&lt;iframe&gt; Tag</h2>
+      <p>The <code>&lt;iframe&gt;</code> tag allows you to embed another HTML document within the current page.</p>
+      <pre>
+&lt;iframe src="https://example.com" title="Example"&gt;&lt;/iframe&gt;
+      </pre>
+    </section>
+    
+    <section id="em-tag">
+      <h2>&lt;em&gt; Tag</h2>
+      <p>The <code>&lt;em&gt;</code> tag is used to emphasize text, usually rendered in italics.</p>
+      <pre>
+&lt;em&gt;This text is emphasized.&lt;/em&gt;
+      </pre>
+    </section>
+    
+    <section id="strong-tag">
+      <h2>&lt;strong&gt; Tag</h2>
+      <p>The <code>&lt;strong&gt;</code> tag indicates that its content is of strong importance, typically rendered in bold.</p>
+      <pre>
+&lt;strong&gt;Important text&lt;/strong&gt;
+      </pre>
+    </section>
+    
+  </main>
+  <footer>
+    <p>&copy; 2025 HTML Tags Reference | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+  <script>
+    function filterTags() {
+      const selector = document.getElementById('tagSelector');
+      const tagKey = selector.value;
+      const sections = document.querySelectorAll('main section');
+      
+      if (tagKey === "all") {
+        sections.forEach(section => section.style.display = "block");
+      } else {
+        sections.forEach(section => {
+          section.style.display = (section.id === tagKey) ? "block" : "none";
+        });
+      }
+    }
+  </script>
 </body>
 </html>
